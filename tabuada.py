@@ -6,7 +6,7 @@ __version_ = "0.1.1"
 __author__ = "Diego Amorim"
 
 template_base = """
----Tabuada do 1---
+-----
 
     {operacoes}
 
@@ -15,13 +15,14 @@ template_base = """
 
 
 #numeros = [1,2,3,4,5,6,7,8,9,10]
-numeros = list(range(1,255))
+numeros = list(range(1,11))
 
 # print(numeros)
 for n1 in numeros:
+    print(
+        "{:-^18}".format(f" Tabuada do {n1} ")
+    )
+    print()
     for n2 in numeros:
-        operacao = f"{n1}x{n2} = {n1 * n2}"
-        print(operacao)
-    #print(template_base.format(
-    #    operacoes=operacoes
-    #))
+        print("{:^18}".format( f"{n1}x{n2} = {n1 * n2}"))
+    
