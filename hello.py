@@ -19,8 +19,7 @@ Execução:
 """
 __version__ = "0.0.1"
 __author__ = "Diego Amorim"
-__license__ = "Unlicense"
-#  Dunder
+ #  Dunder
 
 import os
 
