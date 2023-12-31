@@ -14,15 +14,30 @@ aula_ingles = ["Diego", "Velma", "Pedro", "João"]
 aula_musica = ["Diego", "Sarah", "Erik", "Sophia"]
 aula_danca = ["Sarah", "Marcia", "João", "Luana"]
 
-# Listar alunos em cada atividade por sala
-aula_ingles_sala1 = []
-aula_ingles_sala2 = []
+atividades = [
+    ("Inglês", aula_ingles),
+    ("Musica", aula_musica),
+    ("Dança", aula_danca),
+]
 
-for aluno in aula_ingles:
-    if aluno in sala1:
-        aula_ingles_sala1.append(aluno)
-    elif aluno in sala2:
-        aula_ingles_sala2.append(aluno)
-        
-print("Inglês sala 1", aula_ingles_sala1)
-print("Inglês sala 2", aula_ingles_sala2)
+# Listar alunos em cada atividade por sala
+
+for nome, atividade in atividades:
+    atividade_sala1 = []
+    atividade_sala2 = []
+    for aluno in atividade:
+        if aluno in sala1:
+            atividade_sala1.append(aluno)
+        elif aluno in sala2:
+            atividade_sala2.append(aluno)
+    print("Atividade ", nome)
+    print("-" * 30)
+    print("Sala 1")
+    print(atividade_sala1)
+    print("-" * 30)
+    print("Sala 2")
+    print(atividade_sala2)
+    print()
+    
+            
+    
